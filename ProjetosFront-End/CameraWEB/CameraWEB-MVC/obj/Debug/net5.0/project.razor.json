@@ -15649,6 +15649,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Delta06\\RepositorioEstudos-DotNet\\ProjetosFront-End\\CameraWEB\\CameraWEB-MVC\\Views\\Home\\Camera.cshtml",
+      "TargetPath": "Views\\Home\\Camera.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Delta06\\RepositorioEstudos-DotNet\\ProjetosFront-End\\CameraWEB\\CameraWEB-MVC\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
