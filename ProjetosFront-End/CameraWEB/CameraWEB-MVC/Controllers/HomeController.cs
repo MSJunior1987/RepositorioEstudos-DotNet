@@ -23,6 +23,11 @@ namespace CameraWEB_MVC.Controllers
             return View();
         }
 
+        public IActionResult Camera()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

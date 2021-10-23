@@ -38,3 +38,4 @@ C:\Delta06\RepositorioEstudos-DotNet\ProjetosFront-End\CameraWEB\CameraWEB-MVC\o
 C:\Delta06\RepositorioEstudos-DotNet\ProjetosFront-End\CameraWEB\CameraWEB-MVC\obj\Debug\net5.0\CameraWEB-MVC.pdb
 C:\Delta06\RepositorioEstudos-DotNet\ProjetosFront-End\CameraWEB\CameraWEB-MVC\obj\Debug\net5.0\CameraWEB-MVC.genruntimeconfig.cache
 C:\Delta06\RepositorioEstudos-DotNet\ProjetosFront-End\CameraWEB\CameraWEB-MVC\obj\Debug\net5.0\CameraWEB-MVC.csproj.CopyComplete
+C:\Delta06\RepositorioEstudos-DotNet\ProjetosFront-End\CameraWEB\CameraWEB-MVC\obj\Debug\net5.0\Razor\Views\Home\Camera.cshtml.g.cs
