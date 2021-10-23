@@ -1,0 +1,40 @@
+label, video, canvas, button {
+    display: block;
+}
+
+.Margem-Rotulo {
+    padding-bottom: 5px;
+}
+
+.Estilo-Camera {
+    /*height: 240px;
+    width: 320px;*/
+  height: 330px;
+    width: 410px;
+}
+
+.Tamanho-Foto-Camera {
+    height: 410px;
+    width: 490px;
+}
+
+.icone-camera {
+    height: 60px;
+    width: 75px;
+    margin-left: 37%;
+    margin-top: 27%;
+}
+
+.icone-salvar {
+    width: 60px;
+    height: 60px;
+}
+
+.icone-lixeira {
+    width: 55px;
+    height: 55px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
