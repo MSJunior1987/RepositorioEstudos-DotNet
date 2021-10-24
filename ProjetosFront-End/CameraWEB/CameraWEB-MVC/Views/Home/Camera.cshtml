@@ -6,3 +6,48 @@
     <h1 class="display-4">Bem Vindo!!!</h1>
     <p>Este e apenas um teste de Camera.</p>
 </div>
+<div class="container page-content">
+        <h1><a href="CadastroUsuario.aspx" class="nav-button transform"><span></span></a>&nbsp;Câmera</h1>
+        <div class="padding10 bg-lighterBlue fg-white margin10 no-margin-right no-margin-left align-center">
+            Fotografe logo após, salve.
+        </div>
+        <div id="divPrincipal" style="float: left; margin-right: 229px;">
+            <label class="Margem-Rotulo">Webcam em funcionamento</label>
+            <div class="image-container">
+                <div class="frame">
+                    <video autoplay="autoplay" id="vdCamera" class="Estilo-Camera" runat="server"></video>
+                </div>
+                <div id="imgCamera" class="image-overlay op-grayDarker" style="cursor: pointer;">
+                    <img src="Images/cameraIcon.png" style="height: 60px; width: 75px; margin-left: 40%; margin-top: 32%;" />
+                </div>
+            </div>
+        </div>
+        <div>
+            <label>Fotos salvas</label>
+            <div class="tile-wide br-red" data-role="tile">
+                <div id="filmroll" class="tile-content image-set">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="dialog" id="dialog" class="padding20" data-close-button="false" data-overlay="true" data-overlay-color="op-dark">
+        <h3>Deseja salvar essa imagem?</h3>
+
+        <canvas id="cvFoto" class="Tamanho-Foto-Camera" runat="server"></canvas>
+        <div style="margin-left: 35%">
+            <img id="btnSalvar" src="Images/saveIcon.png" class="icone-salvar cursor-pointer" />
+            <img id="imgLixeira" src="Images/iconLixeira.png" class="icone-lixeira cursor-pointer" />
+        </div>
+
+    </div>
+
+    <script>
+        function abrirModal(id) {
+            var dialog = $(id).data('dialog');
+            dialog.open();
+        }
+        function fecharModal(id) {
+            var dialog = $(id).data('dialog');
+            dialog.close();
+        }
+    </script>

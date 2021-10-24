@@ -28,6 +28,11 @@ namespace CameraWEB_MVC.Controllers
             return View();
         }
 
+        public IActionResult NovaCamera()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

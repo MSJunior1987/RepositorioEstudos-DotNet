@@ -54,7 +54,8 @@ function ligarCamera(pSrc) {
     function (stream) {
         videoStream = stream;
         // Stream the data
-        vdCamera.src = pSrc(stream);
+        // vdCamera.src = pSrc(stream);
+        vdCamera.src = pSrc;
         vdCamera.play();
     },
     function (error) {
