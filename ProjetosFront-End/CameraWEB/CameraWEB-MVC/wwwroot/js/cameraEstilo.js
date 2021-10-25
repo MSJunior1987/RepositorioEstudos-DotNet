@@ -14,9 +14,9 @@ navigator.mediaDevices.getUserMedia({
 })
 
 
-document.querySelector('#capture').addEventListener('click', function (e) {
+document.querySelector('#btnFotografar').addEventListener('click', function (e) {
 
-  var canvas = document.querySelector("#canvas");
+  var canvas = document.querySelector("#cvFoto");
 
   canvas.height = video.videoHeight;
   canvas.width = video.videoWidth;
