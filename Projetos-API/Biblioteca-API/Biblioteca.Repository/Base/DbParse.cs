@@ -13,18 +13,28 @@ namespace Biblioteca.DataAccess.Util
         /// Campo convertido do retorno
         /// </returns>
         public static int ToInt(int? campo)
-        {
+        {                     
             int retorno;
-            if (campo != null)
+            try
             {
-                retorno = Convert.ToInt32(campo);
+            return retorno = (campo != null) ? Convert.ToInt32(campo) : 0;
             }
-            else
+            catch (Exception ex)
             {
-                retorno = 0;
+                throw new Exception(ex.Message);
             }
 
-            return retorno;
+            // int retorno;
+            // if (campo != null)
+            // {
+            //     retorno = Convert.ToInt32(campo);
+            // }
+            // else
+            // {
+            //     retorno = 0;
+            // }
+
+            // return retorno;
         }
 
         /// <summary>
@@ -37,17 +47,29 @@ namespace Biblioteca.DataAccess.Util
         /// </returns>
         public static int? DbParseIntOrNull(IDataRecord row, string campo)
         {
-            int? retorno;
-            if (row[campo] != DBNull.Value)
+           int? retorno;   
+          try
+          {
+             return retorno = (row[campo] != DBNull.Value) ? Convert.ToInt32(row[campo]) : null;
+          }
+         catch (Exception ex)
             {
-                retorno = Convert.ToInt32(row[campo]);
+                throw new Exception(ex.Message);
             }
-            else
-            {
-                retorno = null;
-            }
+            
+            
 
-            return retorno;
+            // int? retorno;
+            // if (row[campo] != DBNull.Value)
+            // {
+            //     retorno = Convert.ToInt32(row[campo]);
+            // }
+            // else
+            // {
+            //     retorno = null;
+            // }
+
+            // return retorno;
         }
 
         /// <summary>
@@ -61,16 +83,17 @@ namespace Biblioteca.DataAccess.Util
         public static int DbParseInt(IDataRecord row, string campo)
         {
             int retorno;
-            if (row[campo] != DBNull.Value)
-            {
-                retorno = Convert.ToInt32(row[campo]);
-            }
-            else
-            {
-                retorno = 0;
-            }
+            return retorno = (row[campo] != DBNull.Value) ? Convert.ToInt32(row[campo]) : 0;
+            // if (row[campo] != DBNull.Value)
+            // {
+            //     retorno = Convert.ToInt32(row[campo]);
+            // }
+            // else
+            // {
+            //     retorno = 0;
+            // }
 
-            return retorno;
+            // return retorno;
         }
 
         /// <summary>
@@ -86,16 +109,17 @@ namespace Biblioteca.DataAccess.Util
             try
             {
                 string retorno;
-                if (row[campo] != DBNull.Value)
-                {
-                    retorno = row[campo].ToString().Trim();
-                }
-                else
-                {
-                    retorno = string.Empty;
-                }
+                return retorno = (row[campo] != DBNull.Value) ? Convert.string(row[campo]) : string.Empty;
+                // if (row[campo] != DBNull.Value)
+                // {
+                //     retorno = row[campo].ToString().Trim();
+                // }
+                // else
+                // {
+                //     retorno = string.Empty;
+                // }
 
-                return retorno;
+                // return retorno;
             }
             catch (Exception ex)
             {
