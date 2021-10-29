@@ -56,16 +56,16 @@ document.querySelector('#idSalvarFoto').addEventListener('click', function (e) {
 
 //// Botao de Upload de imagem////
 document.querySelector("#fileUpload").onchange = function (e){
+
    //Get count of selected files
    var countFiles = $(this)[0].files.length;
 
    var imgPath = $(this)[0].value;
    var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
-   var imgFoto = $("#imgFoto");
-   imgFoto.empty();
-   
-   // var image_holder = $("#image-holder");
-   // image_holder.empty();
+   var image_holder = $("#image-holder");
+   image_holder.empty();
+   var srcImage;
+   var imgFoto = document.querySelector('#imgFoto');
 
    if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
        if (typeof (FileReader) != "undefined") {
@@ -73,23 +73,28 @@ document.querySelector("#fileUpload").onchange = function (e){
            //loop for each file selected for uploaded.
            for (var i = 0; i < countFiles; i++) {
 
-               var reader = new FileReader();
+               var reader = new FileReader();               
+
                reader.onload = function (e) {
-                   $("<img />", {
-                       "src": e.target.result,
-                           "class": "thumb-image"
-                   }).appendTo(imgFoto);
+                  srcImage = e.target.result;
+                  imgFoto.src = srcImage;
+
+                  //  $("<img />", {
+                  //      "src": e.target.result,
+                  //          "class": "thumb-image"
+                  //  }).appendTo(image_holder);
                }
 
-               imgFoto.show();
-               reader.readAsDataURL($(this)[0].files[i]);
+               // image_holder.show();
+               reader.readAsDataURL($(this)[0].files[i]);               
            }
+           $("imgFoto").attr("src", e.target.result);
 
        } else {
-           alert("Seu browser não suporta o FileReader.");
+           alert("This browser does not support FileReader.");
        }
    } else {
-       alert("Por favor selecione somente imagens.");
+       alert("Pls select only images");
    }
 };
 /////////////////////////////////////////////////////
