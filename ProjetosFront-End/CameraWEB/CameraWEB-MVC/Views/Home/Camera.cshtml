@@ -1,37 +1,40 @@
 @{
-    ViewData["Title"] = "Nova Camera WEB";
+  ViewData["Title"] = "Nova Camera WEB";
 }
 
-<button id="btnInserirImagem" class="btn btn-primary" data-toggle="modal" data-target="#divModalCamera">Inserir Foto</button>
+<button id="btnInserirImagem" class="btn btn-primary" data-toggle="modal" data-target="#divModalCamera">Inserir
+  Foto</button>
 <input id="fileUpload" type="file" multiple />
 <div id="image-holder"></div>
 
 
-<div class="modal fade" id="divModalCamera" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+<div class="modal fade" id="divModalCamera" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-        <div class="modal-header">
+      <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Camera WEB</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-          <div id="divVideo" class="image-container">
-            <div class="frame">
-                <video id="video" class="Estilo-Camera"></video>
-            </div>                                 
+        <div id="divVideo" class="image-container">
+          <div class="frame">
+            <video id="video" class="Estilo-Camera"></video>
           </div>
-          <div id="divCanvas" class="image-container">
-            <div data-role="dialog" id="dialog" class="padding20" data-close-button="false" data-overlay="true" data-overlay-color="op-dark">
-            <h3>Deseja salvar essa imagem?</h3>
+        </div>
+        <div id="divCanvas" class="image-container">
+          <div data-role="dialog" id="dialog" class="padding20" data-close-button="false" data-overlay="true"
+            data-overlay-color="op-dark">
+            <h6>Deseja salvar essa imagem?</h6>
             <canvas id="cvFoto" class="Estilo-Camera"></canvas>
-          </div>                 
-    </div>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <div id="divBotoesFotografar">
-          <button id="btnFotografar" type="button" class="btn btn-primary">Fotografar</button> 
+          <button id="btnFotografar" type="button" class="btn btn-primary">Fotografar</button>
           <button id="idFechar" type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
         </div>
         <div id="divBotoesImagem">
@@ -45,9 +48,8 @@
 
 <div>
   <div>
-    <img id="imgFoto" class="image-loaded" src="~/img/camera/foto-gato.jpg"/>
+    <img id="imgFoto" class="image-loaded" src="~/img/camera/foto-gato.jpg" />
   </div>
 </div>
 
 <script src="~/js/camera.js"></script>
-

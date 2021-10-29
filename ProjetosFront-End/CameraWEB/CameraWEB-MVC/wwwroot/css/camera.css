@@ -1,4 +1,7 @@
-label, video, canvas, button {
+label,
+video,
+canvas,
+button {
     display: block;
 }
 
@@ -11,7 +14,7 @@ label, video, canvas, button {
     width: 470px;
 }
 
-.Tamanho-Foto-Camera {    
+.Tamanho-Foto-Camera {
     height: 410px;
     width: 490px;
 }
