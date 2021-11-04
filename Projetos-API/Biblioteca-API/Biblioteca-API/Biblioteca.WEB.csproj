@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Biblioteca_API</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

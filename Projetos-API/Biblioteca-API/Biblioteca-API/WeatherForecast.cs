@@ -1,6 +1,6 @@
 using System;
 
-namespace BibliotecaAPI
+namespace Biblioteca_API
 {
     public class WeatherForecast
     {
